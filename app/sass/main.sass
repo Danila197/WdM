@@ -91,7 +91,17 @@ body
 		background-color: darken($accent, 5%)
 		&::after
 			opacity: .32
-			
+	&.button-white
+		background-color: #fff
+		color: #444
+		&::after
+			background-color: rgba(#000, 0.6)
+		&:hover
+			&::after
+				background-color: rgba(#000, 0.2)
+		&:active
+			&::after
+				background-color: rgba(#000, 0.4)
 .logo
 	img
 		width: 125px
@@ -296,6 +306,14 @@ $colors: $blue, $red, $accent
 		&:hover
 			.carousel-services-image
 				opacity: 1
+		.carousel-logo
+			text-align: center
+			img
+				width: 100px
+				height: auto
+				display: inline-block
+
+
 	.owl-item
 		&:nth-child(2n)
 			.carousel-services-item
@@ -306,8 +324,54 @@ $colors: $blue, $red, $accent
 		opacity: 0.7
 		transition: opacity 0.5s ease
 	&-content
-		display: flex
 		position: relative
+		padding: 60px 10%
+	&-composition
+		margin: auto
+		text-align: center
+		width: 100%
+		.h3
+			font-weight: 800
+			font-size: 28px
+			margin-top: 5px
+			margin-bottom: 20px
+			span
+				font-weight: 300
+				font-size: 18px
+				display: block
+	&-list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		margin-bottom: 25px
+		li
+			padding: 9px
+			border-bottom: 1px solid rgba(#000, 0.12)
+			&:last-child
+				border: none
+			strong
+				font-family: firasans, sans-serif
+				color: #4A4A4A
+			.fa
+				font-size: 14px
+	.owl-nav
+		position: absolute
+		top: 0
+		width: 100%
+		> div
+			text-align: center
+			width: 64px
+			height: 64px
+			background-color: #fff
+			color: $dark
+			position: absolute
+			line-height: 64px
+			font-size: 26px
+			&.owl-prev
+				left: 0
+			&.owl-next
+			right: 0
+
 
 .owl-carousel
 	.owl-item
